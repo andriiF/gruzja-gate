@@ -10963,6 +10963,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #chat-iframe {
+    margin-top: 25px;
+  }
+}
+
 .custom-input {
   text-align: center;
   background: #004aac;
