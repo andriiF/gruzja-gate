@@ -5,6 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                <img class="dancer" src="{{asset('img/dancer.svg')}}" alt="">
                 <iframe src="https://vimeo.com/event/75305/embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
             </div>
             <div class="col-md-4">

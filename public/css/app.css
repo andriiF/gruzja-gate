@@ -10954,6 +10954,27 @@ body {
   transition: 0.5s;
 }
 
+@media only screen and (min-width: 600px) {
+  .md-mt--3 {
+    margin-top: -30px;
+  }
+}
+
+.dancer {
+  position: relative;
+  z-index: 1000000;
+  left: -70px;
+  top: -60px;
+  height: auto;
+  width: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dancer {
+    display: none;
+  }
+}
+
 .btn-custom-yellow {
   background: #fed224;
   border-color: #fed01a;

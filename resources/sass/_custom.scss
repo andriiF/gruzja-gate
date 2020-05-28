@@ -21,7 +21,22 @@ body{
         transition: 0.5s;
     }
 }
-
+.md-mt--3{
+    @media only screen and (min-width: 600px){
+        margin-top: -30px;
+    }
+}
+.dancer{
+    @media only screen and (max-width: 600px){
+        display: none;
+    }
+    position:relative;
+    z-index: 1000000;
+    left: -70px;
+    top: -60px;
+    height:auto;
+    width: 90px;
+}
 .btn-custom-yellow{ 
     background: #fed224;
     border-color: darken(#fed224, 2);
