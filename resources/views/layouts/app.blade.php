@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{setting('site.title')}}</title>
-        <meta name="description" content="{{setting('site.description')}}"/>
+        <meta name="robots" content="noindex">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
