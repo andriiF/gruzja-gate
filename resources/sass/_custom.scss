@@ -2,6 +2,9 @@
     position: absolute;
     bottom: 0px;
     z-index: -1;
+    @media only screen and (max-height: 550px){
+        position: static;
+    }
 }
 body{
     background: #004198;

@@ -10934,6 +10934,12 @@ a.text-dark:focus {
   z-index: -1;
 }
 
+@media only screen and (max-height: 550px) {
+  .footer-banner {
+    position: static;
+  }
+}
+
 body {
   background: #004198;
   min-height: 100%;
