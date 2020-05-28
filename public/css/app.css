@@ -10946,6 +10946,19 @@ body {
   height: 100%;
 }
 
+@media only screen and (min-width: 601px) {
+  #video-iframe {
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #video-iframe {
+    position: static;
+    margin-bottom: 50px;
+  }
+}
+
 .custom-input {
   text-align: center;
   background: #004aac;
