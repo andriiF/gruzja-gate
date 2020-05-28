@@ -10940,6 +10940,10 @@ a.text-dark:focus {
   }
 }
 
+.img-fluid {
+  width: 100%;
+}
+
 body {
   background: #004198;
   min-height: 100%;
