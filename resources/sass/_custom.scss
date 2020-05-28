@@ -1,0 +1,36 @@
+.footer-banner{
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+}
+body{
+    background: #004198;
+    min-height: 100%;
+    height: 100%;
+}
+
+ .custom-input { 
+    text-align: center; 
+    background: lighten(#004198, 4);
+    border-width: 2px;
+    color: white;
+    &:focus{
+        background: transparent;
+        color: white;
+        background: lighten(#004198, 8);
+        transition: 0.5s;
+    }
+}
+
+.btn-custom-yellow{ 
+    background: #fed224;
+    border-color: darken(#fed224, 2);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    &:hover{
+        -webkit-box-shadow: 0px 0px 20px -5px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 0px 20px -5px rgba(255,255,255,1);
+        box-shadow: 0px 0px 20px -5px rgba(255,255,255,1);
+    }
+}

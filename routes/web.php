@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/live',[
+    'uses' => 'CodeController@verify', 
+    'as' => 'code.verify.route'
+]);
+Route::get('/live/{code}',[
+    'uses' => 'CodeController@show', 
+    'as' => 'live.route'
+]);
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
