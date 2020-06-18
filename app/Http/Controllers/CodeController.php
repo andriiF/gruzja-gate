@@ -21,7 +21,7 @@ class CodeController extends Controller
         if($can_use){
             return view('live');
         }else{
-            $error = !$code ? 'Wrong code provided.' : "You have exceeded the limit of 3 code uses.";
+            $error = !$code ? __('messages.wrong_code') : __('messages.limit') ;
             return view('welcome')->with(['error' => $error]);
         }
     }
@@ -36,14 +36,13 @@ class CodeController extends Controller
     public function verify(Request $request)
     {
         $code = Code::where('code', $request->input('code'))->first();
-        $can_use = $code && 3 - $code->times_used > 0;
 
-        if($can_use){
+        if($code && 3 - $code->times_used > 0){
             $code->times_used += 1;
             $code->save(); 
             return redirect('/live/' . $code->code);
         }else{
-            $error = !$code ? 'Wrong code provided.' : "You have exceeded the limit of 3 code uses.";
+            $error = !$code ? __('messages.wrong_code') : __('messages.limit') ;
             return view('welcome')->with(['error' => $error]);
         }
     }
