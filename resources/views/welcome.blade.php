@@ -13,7 +13,7 @@
                     @endif
                 </div> 
                 <div class="form-group col-md-4 offset-md-4">
-                    <input maxlength="6" type="text" class="form-control custom-input" name="code" id="code" required>
+                    <input  type="text" class="form-control custom-input" name="code" id="code" required>
                     <button type="submit" class="btn btn-lg btn-custom mt-3">@lang('messages.join')</button>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 </div>
