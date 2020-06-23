@@ -7,7 +7,7 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2 class="text-white font-weight-bold">@lang('messages.enter_your_code')</h2>
-                    <p class="text-white">@lang('messages.technical_issues')<br> @lang('messages.contact')<a style="color:white; font-weight:bold" href="mailto:distributionforum@imagine-nation.pl">distributionforum@imagine-nation.pl</a></p>
+                    <p class="text-white">@lang('messages.technical_issues')<br> @lang('messages.contact')<a style="color:white; font-weight:bold" href="mailto:k.derecka@imagine-nation.pl"> k.derecka@imagine-nation.pl</a></p>
                     @if (isset($error))
                     <p class="font-weight-bold text-danger">{{$error}}</p>
                     @endif
