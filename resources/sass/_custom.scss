@@ -98,7 +98,7 @@ a {
 .video-container {
     padding:56.25% 0 0 0;
     position:relative; 
-    width: 1280px; 
+    width: 100%; 
     height: auto;
     max-width: 100%;
 }
@@ -111,5 +111,8 @@ a {
     .chat-container {
 
         max-width: initial;
+    }
+    #countDown {
+        font-size: 20px;
     }
 }
