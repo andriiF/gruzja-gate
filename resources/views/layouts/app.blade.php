@@ -31,9 +31,6 @@ gtag('config', "{{setting('site.google_analytics_tracking_id')}}");
         <main>
             @yield('content')
         </main>
-        <footer>
-            <img class="img-fluid" src="{{ asset('img/footer.png') }}" alt="">
-        </footer>
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>
 </html>

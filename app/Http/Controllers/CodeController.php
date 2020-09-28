@@ -15,13 +15,12 @@ class CodeController extends Controller {
      */
     public function show($code) {
         $code = Code::where('code', $code)->first();
-        $can_use = $code && $code->times_used < 4;
 
-        if ($can_use) {
+        if ($code) {
             return view('live');
         } else {
             $error = !$code ? __('messages.wrong_code') : __('messages.limit');
-            return view('welcome')->with(['error' => $error]);
+            return view('welcome')->with(['error' => $error, 'is_code' => true]);
         }
     }
 
@@ -33,17 +32,12 @@ class CodeController extends Controller {
      */
     public function verify(Request $request) {
         $code = Code::where('code', $request->input('code'))->first();
-        if ($code && 3 - $code->times_used > 0) {
 
-            $code->times_used += 1;
-            $code->save();
-            $this->sendRequestToMainPage($code);
+        $code->times_used += 1;
+        $code->save();
+//        $this->sendRequestToMainPage($code);
 
-            return redirect('/live/' . $code->code);
-        } else {
-            $error = !$code ? __('messages.wrong_code') : __('messages.limit');
-            return view('welcome')->with(['error' => $error]);
-        }
+        return redirect('/live/' . $code->code);
     }
 
     private function sendRequestToMainPage($code) {
