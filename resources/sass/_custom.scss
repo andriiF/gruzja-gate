@@ -105,3 +105,10 @@ a {
     max-width: 400px;
     height: 600px;
 }
+
+@media only screen and (max-width: 767px) {
+    .chat-container {
+
+        max-width: initial;
+    }
+}
