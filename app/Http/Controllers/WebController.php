@@ -16,6 +16,8 @@ class WebController extends Controller {
             $is_code = true;
         }
 
+        
+        //todo
 
         return view('welcome')->with([
 //            'is_code'=>$is_code 
