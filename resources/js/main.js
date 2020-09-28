@@ -44,7 +44,7 @@ function countDownTimer(date) {
         elem.html(timeString);
 
 
-        if (days <= 0 && hours <= 0 && min <= 0) {
+        if (days < 0 || hours < 0 || min < 0) {
             $('.section-form').removeClass('d-none');
             $('.content').addClass('d-none');
         }
