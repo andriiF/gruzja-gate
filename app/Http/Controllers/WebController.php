@@ -9,7 +9,7 @@ class WebController extends Controller {
     public function index() {
             $is_code = false;
 
-        $date = strtotime('29-09-2020 10:00:00');
+        $date = strtotime('29-09-2020 09:45:00');
         $now = strtotime(now());
         
         if($now > $date) {

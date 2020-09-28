@@ -53,4 +53,4 @@ function countDownTimer(date) {
 }
 
 // Enter date in this format: January 1, 2017 12:00:00
-countDownTimer('September 29, 2020 10:00:00');
+countDownTimer('September 29, 2020 09:45:00');
