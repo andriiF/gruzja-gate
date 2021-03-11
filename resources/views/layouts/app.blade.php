@@ -9,6 +9,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/flipTimer.css" rel="stylesheet">
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
         <link rel="shortcut icon" href="storage/{{setting('site.favicon')}}"/>

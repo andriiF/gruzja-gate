@@ -1,118 +1,253 @@
-#video-iframe{
-    @media only screen and (min-width: 601px){
-        position: absolute;
-    }
-    @media only screen and (max-width: 600px){
-        position: static;
-        margin-bottom: 50px;
-    }
-}
-#chat-iframe{
-    @media only screen and (max-width: 600px){
-        margin-top: 25px;
-    }
-}
-.btn-custom {
-    color:#fff;
-    background-color: #4FABFE;
-    border:1px solid #4FABFE;
-    &:hover {
-        color:#4FABFE;
-        background-color: #fff;
-
-    }
-}
-.section-form {
-    min-height: 30vh;
-    margin-top: 20px;
+@font-face {
+    font-family: Montserrat-bold;
+    src: url('../fonts/Montserrat-Bold.ttf');
 }
 
-main {
-    min-height: 100vh;
-    font-family: sans-serif;
-}
-
-.header img {
-    max-height: 40vh;
-}
-.footer {
-
-    max-height: 30vh;
-}
-.footer img {
-    margin-bottom: -4px;
-}
-img {
-    width: 100%;
-    height: auto;
+@font-face {
+    font-family: Montserrat-light;
+    src: url('../fonts/Montserrat-Light.ttf');
 }
 body {
+    background-color: #303940;
     margin: 0;
+    height: 100vh;
 }
-.counter {
+.footer {
+    position:absolute;
+    bottom: 0;
+}
+body img {
     width: 100%;
-    text-align: center;
-    margin-top: 70px;
+}
+img.left {
+    width: 80%;
+}
+img.right {
+    width: 80%;
+    position: absolute;
+    top:0;
+    right: 5%;
 
 }
-#countDown {
-    padding: 10px 20px;
-    border: 1px solid #94c0e5;
-    display: inline;
-    background-color: #f4f7fa;
-    font-size: 30px;
+
+body .fullsize {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh; }
+body  .zegar {
+    position: absolute;
+    bottom: 25vh;
+    margin: auto;
+    left: 0;
+    right: 0; }
+body .zegar p {
+    color:white;
+    font-size: 26px;
     font-weight: bold;
-}
-.content {
-    line-height: 2;
-    min-height: 30vh;
-}
-a {
-    color:#212529;
+    text-transform: uppercase;
+    font-family: 'Montserrat-bold';
 }
 
-.live-section {
-    background: url('../img/bg.jpg');
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 50px;
+body .flipTimer .days,body .flipTimer .hours, body .flipTimer .minutes {
+    position: relative;
+}
+body .flipTimer .days:after,body .flipTimer .hours:after,body .flipTimer .minutes:after {
+    content: 'Dni';
+    position: absolute;
+    bottom: -60px;
+    font-weight: 100;
+    font-size: 24px;
+    text-transform: uppercase;
+    left: 0;
+    font-family: 'Montserrat-light';
+    width: 100%;
+}
+body .flipTimer .hours:after{
+    content: 'godzin';
+}
+body .flipTimer .minutes:after{
+    content: 'minut';
+
 }
 
 
+body .flipTimer .digit > div {
+    height: 49%; }
+body .flipTimer .digit-set {
+    margin: 0 7px; }
+body .digit-set:before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    height: 12px;
+    border-left: 2px solid #fd8582;
+    margin: auto;
+    top: 0;
+    bottom: 0; }
+body .digit-set:after {
+    content: '';
+    position: absolute;
+    right: -7px;
+    height: 12px;
+    border-left: 2px solid #fd8582;
+    margin: auto;
+    top: 0;
+    bottom: 0; }
+body .flipTimer .digit > div.digit-top, body .flipTimer .digit > div.shadow-top {
+    background-color: transparent; }
+body .flipTimer .digit > div.digit-bottom:before, body .flipTimer .digit > div.shadow-bottom:before {
+    box-shadow: none; }
+body .flipTimer .digit > div.digit-top:before, body .flipTimer .digit > div.shadow-top:before {
+    box-shadow: none; }
+body .flipTimer .digit > div.shadow-bottom {
+    background: transparent; }
+body .days .digit-set:first-child {
+    box-shadow: none;
+    border: none; }
+body .days .digit-set:first-child .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/1-2.png"); }
+body .days .digit-set:first-child .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/1-1.png"); }
+body .days .digit-set:nth-child(2) {
+    box-shadow: none;
+    border: none; }
+body .days .digit-set:nth-child(2) .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/2-2.png"); }
+body .days .digit-set:nth-child(2) .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/2-1.png"); }
+body .hours .digit-set:first-child {
+    box-shadow: none;
+    border: none; }
+body .hours .digit-set:first-child .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/3-2.png"); }
+body .hours .digit-set:first-child .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/3-1.png"); }
+body .hours .digit-set:nth-child(2) {
+    box-shadow: none;
+    border: none; }
+body .hours .digit-set:nth-child(2) .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/4-2.png"); }
+body .hours .digit-set:nth-child(2) .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/4-1.png"); }
+body .minutes .digit-set:first-child {
+    box-shadow: none;
+    border: none; }
+body .minutes .digit-set:first-child .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/5-2.png"); }
+body .minutes .digit-set:first-child .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/5-1.png"); }
+body .minutes .digit-set:nth-child(2) {
+    box-shadow: none;
+    border: none; }
+body .minutes .digit-set:nth-child(2) .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/6-2.png"); }
+body .minutes .digit-set:nth-child(2) .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/6-1.png"); }
+body .seconds .digit-set:first-child {
+    box-shadow: none;
+    border: none; }
+body .seconds .digit-set:first-child .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/5-2.png"); }
+body .seconds .digit-set:first-child .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/5-1.png"); }
+body .seconds .digit-set:nth-child(2) {
+    box-shadow: none;
+    border: none; }
+body .seconds .digit-set:nth-child(2) .digit > div.digit-bottom {
+    box-shadow: none;
+    border: none;
+    background-color: red;
+    background-image: url("../img/zegar/6-2.png"); }
+body .seconds .digit-set:nth-child(2) .digit > div.digit-top {
+    box-shadow: none;
+    border: none;
+    background-image: url("../img/zegar/6-1.png"); }
 
-@media only screen and (max-height: 700px) and (max-width: 1400px) and (min-width: 768px) {
-
+@media only screen and (max-width: 991px) {
+    .left-container {
+        position: relative;
+        z-index: -1;
+        top: -10px;
+    }
+    body img {
+        width: 100%;
+    }
+    body {
+        height: auto;
+    }
+    .right-container img {
+        opacity: 0.3; }
     .footer {
-        position:initial;
-        margin-top:20px;
+        position: initial;
     }
-    .header img {
-        max-height:initial ;
+    img.right {
+        position: initial;
+    }
+    body  .zegar {
+        bottom: 36vh; 
+        position: initial;
+        padding-bottom: 100px;
+    } }
+@media only screen and (max-width: 576px) {
+
+    .flipTimer {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        line-height: 47px;
+        height: 44px;
+    }
+    .flipTimer .digit-set {
+        width: 40px;
     }
 
+    .flipTimer .hours {
+        /*margin: 30px 0;*/
+    } }
+@media only screen and (min-width: 1000px) and (max-height:750px) {
+    img.left {
+        width: 65vh;
+    }
+    img.right {
+        width: 65vh;
 
+    } 
 }
 
 
-.video-container {
-    padding:56.25% 0 0 0;
-    position:relative; 
-    width: 100%; 
-    height: auto;
-    max-width: 100%;
-}
-.chat-container {
-    max-width: 400px;
-    height: 600px;
-}
-
-@media only screen and (max-width: 767px) {
-    .chat-container {
-
-        max-width: initial;
-    }
-    #countDown {
-        font-size: 20px;
-    }
-}
