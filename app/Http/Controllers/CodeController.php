@@ -32,12 +32,17 @@ class CodeController extends Controller {
      */
     public function verify(Request $request) {
         $code = Code::where('code', $request->input('code'))->first();
+        if ($code) {
 
-        $code->times_used += 1;
-        $code->save();
+            $code->times_used += 1;
+            $code->save();
 //        $this->sendRequestToMainPage($code);
 
-        return redirect('/live/' . $code->code);
+            return redirect('/live/' . $code->code);
+        } else {
+            $error = !$code ? __('messages.wrong_code') : __('messages.limit');
+            return view('welcome')->with(['error' => $error, 'is_code' => true]);
+        }
     }
 
     private function sendRequestToMainPage($code) {

@@ -199,6 +199,140 @@ body .seconds .digit-set:nth-child(2) .digit > div.digit-top {
     border: none;
     background-image: url("../img/zegar/6-1.png"); }
 
+
+body {
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        label {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: "Montserrat-bold";
+        }   
+        button {
+            margin-top: 15px;
+            text-transform: uppercase;
+            font-family: "Montserrat-bold";
+            font-size: 30px;
+            color:#fff;
+            font-weight: bold;
+            background-color: #f86796;
+            border:none;
+            &:active, &:focus, &:hover {
+                border:none;
+                outline: none;
+            }
+        }
+        p {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 100;
+            text-transform: none;
+            a {
+                color: #f86796;
+            }
+        }
+        .input-wrapper {
+            background-image: url('../img/bg-color.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 8px;
+            input {
+                padding: 20px 30px;
+                width: 100%;
+                text-transform: uppercase;
+                background-color: #fff;
+                color:#dfdfdf;
+                font-size: 25px;
+                text-align: center;
+                border:none;
+                &:active, &:focus, &:hover {
+                    border:none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+.live-section {
+    .left-kolo {
+        position: absolute;
+        top:-80px;
+        left: 2%;
+        background-image: url('../img/live/kolo-gora.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+    }
+    .right-kolo {
+        position: absolute;
+        top:0px;
+        right: 0;
+        background-image: url('../img/live/right_kolo.png');
+        background-repeat: no-repeat;
+        width: 250px;
+        background-size: contain;
+        background-position: right;
+        height: 60%;
+    }
+    .middle-kolo {
+        position: absolute;
+        top:10%;
+        left: 50%;
+        background-image: url('../img/live/obrecz_gora.png');
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+    }
+    .little-kolo {
+        position: absolute;
+        top:15%;
+        left: 10%;
+        background-image: url('../img/live/obrecz_gora.png');
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+    .bottom-kolo {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: url('../img/live/left-bg.png');
+        background-repeat: no-repeat;
+        width: 500px;
+        height: 500px;
+
+        background-size: contain;
+    }
+    .piramida{
+        position: absolute;
+        right: 25%;
+        bottom: 0;
+        background-image: url('../img/live/piramida_bottom.png');
+        background-repeat: no-repeat;
+        width: 200px;
+        background-size: contain;
+        height: 177px;
+    }
+    .rainbow-line {
+        position: absolute;
+        background-size: contain;
+        bottom: 30%;
+        right: 10%;
+        background-image: url('../img/live/rainbow-line.png');
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 40px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .left-container {
         position: relative;
