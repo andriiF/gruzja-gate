@@ -19,7 +19,6 @@ class WebController extends Controller {
 
         return view('welcome')->with([
                     'is_code' => $is_code,
-                    'is_code' => true
         ]);
     }
 
