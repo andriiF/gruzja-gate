@@ -12,6 +12,9 @@ body {
     margin: 0;
     height: 100vh;
 }
+.padding-image {
+    margin:  0 -15px;
+}
 .footer {
     position:absolute;
     bottom: 0;
@@ -201,6 +204,9 @@ body .seconds .digit-set:nth-child(2) .digit > div.digit-top {
 
 
 body {
+    .zegar.input {
+        bottom: 10vh;
+    }
     .form-wrapper {
         display: flex;
         justify-content: center;
@@ -400,10 +406,10 @@ body {
     } }
 @media only screen and (min-width: 1000px) and (max-height:750px) {
     img.left {
-        width: 65vh;
+        width: 70vh;
     }
     img.right {
-        width: 65vh;
+        width: 70vh;
 
     } 
 }

@@ -31,7 +31,10 @@ gtag('config', "{{setting('site.google_analytics_tracking_id')}}");
     </head>
     <body>
         <main>
-            @yield('content')
+            <div class="container-fluid">
+
+                @yield('content')
+            </div>
         </main>
     </body>
     <script src="{{ mix('/js/app.js') }}"></script>
