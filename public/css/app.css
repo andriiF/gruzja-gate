@@ -367,6 +367,7 @@ body .form-wrapper .input-wrapper input:hover {
   background-size: contain;
   background-position: right;
   height: 60%;
+  background-position: top right;
 }
 
 .live-section .middle-kolo {
@@ -398,7 +399,7 @@ body .form-wrapper .input-wrapper input:hover {
   background-image: url(/images/left-bg.png?78f45748da2594d40f79546559b3f51a);
   background-repeat: no-repeat;
   width: 500px;
-  height: 500px;
+  height: 50vh;
   background-size: contain;
 }
 
@@ -455,6 +456,27 @@ body .form-wrapper .input-wrapper input:hover {
     bottom: 36vh;
     position: initial;
     padding-bottom: 100px;
+  }
+
+  .live-section .rainbow-line {
+    width: 125px;
+    height: 20px;
+  }
+
+  .live-section .middle-kolo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .live-section .piramida {
+    width: 100px;
+    height: 85px;
+  }
+
+  .live-section .left-kolo {
+    width: 120px;
+    height: 120px;
+    top: -50px;
   }
 }
 

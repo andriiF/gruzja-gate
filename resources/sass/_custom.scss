@@ -279,6 +279,7 @@ body {
         background-size: contain;
         background-position: right;
         height: 60%;
+        background-position: top right;
     }
     .middle-kolo {
         position: absolute;
@@ -299,6 +300,7 @@ body {
         width: 50px;
         height: 50px;
         background-size: contain;
+
     }
     .bottom-kolo {
         position: absolute;
@@ -307,11 +309,11 @@ body {
         background-image: url('../img/live/left-bg.png');
         background-repeat: no-repeat;
         width: 500px;
-        height: 500px;
+        height: 50vh;
 
         background-size: contain;
     }
-    .piramida{
+    .piramida {
         position: absolute;
         right: 25%;
         bottom: 0;
@@ -357,7 +359,29 @@ body {
         bottom: 36vh; 
         position: initial;
         padding-bottom: 100px;
-    } }
+    }
+    .live-section {
+        .rainbow-line {
+            width: 125px;
+            height: 20px; 
+        } 
+        .middle-kolo {
+            width: 80px;
+            height:80px;
+        }
+        .piramida {
+            width:100px;
+            height: 85px;
+        }
+        .left-kolo {
+            width: 120px;
+            height: 120px;
+            top:-50px;
+        }
+
+
+    }
+}
 @media only screen and (max-width: 576px) {
 
     .flipTimer {
