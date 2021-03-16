@@ -31,6 +31,10 @@ img.left {
   width: 80%;
 }
 
+.video-container {
+  padding-top: 15px;
+}
+
 img.right {
   width: 80%;
   position: absolute;
